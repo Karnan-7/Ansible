@@ -1,0 +1,9 @@
+##########################################
+Hostname    : {{ ansible_hostname }}
+IP Address  : {{ ansible_default_ipv4.address }}
+Uptime      : {{ lookup('pipe', 'uptime -p') }}
+Disk Usage  : {{ lookup('pipe', "df -h / | tail -1 | awk '{print $5}'") }}
+Last Login  : {{ lookup('pipe', 'last -n 1 | head -1') }}
+Contact     : aravindhan_jayaraman
+##########################################
+

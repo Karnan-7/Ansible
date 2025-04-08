@@ -1,0 +1,12 @@
+- name: Deploy Dynamic MOTD
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Copy MOTD file
+      template:
+        src: /root/Ansible/Justo_Projects/wallpaper/motd/templates/motd.j2
+        dest: /etc/motd
+        owner: root
+        group: root
+        mode: 0644
