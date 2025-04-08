@@ -5,7 +5,7 @@
   tasks:
     - name: Copy MOTD file
       template:
-        src: /root/Ansible/Justo_Projects/wallpaper/motd/templates/motd.j2
+        src: "motd.j2 template location"
         dest: /etc/motd
         owner: root
         group: root
